@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Präsentation - CSS Frameworks, TypeScript und JSON</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Präsentation</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#bootstrap-tailwind"
+                >Bootstrap und Tailwind</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#typescript">TypeScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#json">JSON</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="text-center">
+        Präsentation zu CSS Frameworks, TypeScript und JSON
+      </h1>
+      <hr />
+
+      <!-- Gruppe 1: Bootstrap / Tailwind -->
+      <section id="bootstrap-tailwind">
+        <h2>CSS Frameworks: Bootstrap und Tailwind</h2>
+        <h3>Sinn und Zweck</h3>
+        <p>
+          Bootstrap und Tailwind sind CSS-Frameworks, die die Entwicklung von
+          responsiven und einheitlichen Benutzeroberflächen erleichtern.
+        </p>
+
+        <h3>Vor- und Nachteile</h3>
+        <p>
+          <strong>Bootstrap:</strong> Einfach zu verwenden, viele vorgefertigte
+          Komponenten, kann aber zu "uniformen" Websites führen.
+        </p>
+        <p>
+          <strong>Tailwind:</strong> Flexibel und leichtgewichtig, ermöglicht
+          kreative Freiheit, hat aber eine steilere Lernkurve.
+        </p>
+
+        <h3>Verwendung und Einbindung</h3>
+        <p>
+          Bootstrap kann per CDN oder als Paket in das Projekt eingebunden
+          werden. Tailwind benötigt eine Build-Umgebung für das beste Ergebnis.
+        </p>
+
+        <h3>Kurzbeispiel einiger UI Komponenten</h3>
+        <div class="card mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Beispiel Button</h5>
+            <button class="btn btn-primary">Bootstrap Button</button>
+          </div>
+        </div>
+
+        <h3>Erstellen von Formularen</h3>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email-Adresse</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="name@beispiel.com"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
+
+        <h3>Alternativen zu Bootstrap und Tailwind</h3>
+        <ul>
+          <li>Bulma</li>
+          <li>Foundation</li>
+          <li>Materialize CSS</li>
+        </ul>
+      </section>
+
+      <br />
+      <br />
+
+      <!-- Was ist TypeScript? -->
+      <section id="typescript">
+        <h2>TypeScript</h2>
+        <hr />
+
+        <!-- Erklärung und Unterschiede zu JavaScript -->
+        <h3>Was ist TypeScript?</h3>
+        <p>
+          TypeScript ist eine typisierte Supersprache von JavaScript, die die
+          Entwicklung von großen Projekten erleichtert.
+        </p>
+
+        <!-- Unterschiede zu JavaScript -->
+        <h3>Unterschiede zu JavaScript</h3>
+        <p>
+          TypeScript fügt statische Typisierung hinzu, die Fehler zur
+          Entwicklungszeit statt zur Laufzeit auffängt.
+        </p>
+
+        <!-- Vorteile von TypeScript -->
+        <h3>Vorteile von TypeScript</h3>
+        <ul>
+          <li>Typensicherheit</li>
+          <li>Bessere Code-Verwaltung</li>
+          <li>Kompatibilität zu JavaScript</li>
+        </ul>
+
+        <!-- Voraussetzungen und Beispielcode -->
+        <h3>Voraussetzungen</h3>
+        <p>
+          Um TypeScript zu verwenden, muss Node.js installiert sein. TypeScript
+          kann mit <code>npm install -g typescript</code> installiert werden.
+        </p>
+
+        <h3>Codebeispiel:</h3>
+        <h4>TypeScript</h4>
+        <p>
+          Hier ein Vergleich zwischen JavaScript und TypeScript, um die
+          Unterschiede und Vorteile von TypeScript zu verstehen:
+        </p>
+
+        <pre><code>
+        // TypeScript
+        function add(a: number, b: number): number {
+            return a + b;
+        }
+        </code></pre>
+
+        <h4>JavaScript-Code</h4>
+        <p>Im JavaScript-Teil wird die Funktion wie folgt definiert:</p>
+        <pre><code>
+        // JavaScript
+        function add(a, b) {
+            return a + b;
+        }
+        </code></pre>
+        <p>
+          <strong>Funktion:</strong> Diese Funktion <code>add</code> nimmt zwei
+          Parameter <code>a</code> und <code>b</code>.<br />
+          <strong>Parameter:</strong> Es ist nicht festgelegt, welche Art von
+          Daten <code>a</code> und <code>b</code> sein sollen. JavaScript
+          erlaubt, dass <code>a</code> und <code>b</code> beliebige Datentypen
+          (wie Zahlen, Zeichenketten usw.) sein können.<br />
+          <strong>Rückgabewert:</strong> Auch der Rückgabewert ist nicht
+          festgelegt. Es gibt keine Überprüfung, ob <code>a</code> und
+          <code>b</code> die gewünschten Datentypen sind.
+        </p>
+        <p>Beispiel in JavaScript:</p>
+        <pre><code>
+        console.log(add(5, 3));    // Gibt 8 aus
+        console.log(add("5", "3")); // Gibt "53" aus, da Zeichenketten konkateniert werden
+        </code></pre>
+
+        <h4>TypeScript-Code</h4>
+        <p>Im TypeScript-Teil wird die Funktion wie folgt definiert:</p>
+        <pre><code>
+        function add(a: number, b: number): number {
+            return a + b;
+        }
+        </code></pre>
+        <p>
+          <strong>Typannotation für Parameter:</strong>
+          <code>a: number</code> und <code>b: number</code> geben an, dass
+          <code>a</code> und <code>b</code> Zahlen sein müssen. Falls ein
+          anderer Typ übergeben wird, zeigt TypeScript einen Fehler an.<br />
+          <strong>Typannotation für Rückgabewert:</strong>
+          <code>: number</code> hinter der Klammer des Funktionsnamens gibt an,
+          dass der Rückgabewert ebenfalls eine Zahl sein muss.
+        </p>
+        <p>Beispiel in TypeScript:</p>
+        <pre><code>
+        console.log(add(5, 3));    // Gibt 8 aus, Typprüfung bestanden
+        console.log(add("5", "3")); // TypeScript-Fehler: Argumente müssen vom Typ 'number' sein
+        </code></pre>
+
+        <h3>Vorteile der TypeScript-Typisierung</h3>
+        <ul>
+          <li>
+            <strong>Fehler zur Entwicklungszeit:</strong> TypeScript erkennt
+            falsche Datentypen sofort im Editor, bevor der Code ausgeführt wird,
+            und vermeidet so Fehler zur Laufzeit.
+          </li>
+          <li>
+            <strong>Lesbarkeit und Wartbarkeit:</strong> Der Code wird klarer,
+            da sofort ersichtlich ist, welche Datentypen erwartet und
+            zurückgegeben werden.
+          </li>
+          <li>
+            <strong>Auto-Completion und Code-Unterstützung:</strong>
+            Entwicklungsumgebungen bieten häufig Code-Vervollständigung und
+            Hinweise basierend auf den Typangaben, was die Entwicklung
+            vereinfacht und beschleunigt.
+          </li>
+        </ul>
+      </section>
+      <br />
+      <br />
+
+      <section id="json">
+        <h2>JSON</h2>
+        <hr />
+
+        <!-- Erklärung von JSON -->
+        <h3>Was ist JSON?</h3>
+        <p>
+          JSON (JavaScript Object Notation) ist ein leichtgewichtiges und
+          lesbares Datenformat, das häufig für den Datenaustausch zwischen
+          Server und Client verwendet wird. JSON wird typischerweise in APIs
+          (Application Programming Interfaces) genutzt, um Daten in
+          strukturierter Form zu senden und zu empfangen.
+        </p>
+
+        <!-- Struktur von JSON -->
+        <h3>Struktur von JSON</h3>
+        <p>JSON besteht hauptsächlich aus zwei Datentypen:</p>
+        <ul>
+          <li>
+            <strong>Array:</strong> Ein Array ist eine geordnete Liste von
+            Werten und wird in eckigen Klammern <code>[]</code> geschrieben.
+            Arrays können eine Liste von Werten desselben oder verschiedener
+            Datentypen enthalten.
+          </li>
+          <li>
+            <strong>Objekt:</strong> Ein Objekt ist eine Sammlung von
+            Schlüssel-Wert-Paaren und wird in geschweiften Klammern
+            <code>{}</code> geschrieben. Der Schlüssel ist immer eine
+            Zeichenkette, und der Wert kann jeder JSON-Datentyp sein.
+          </li>
+        </ul>
+
+        <!-- JSON-Datentypen -->
+        <h3>Datentypen in JSON</h3>
+        <p>JSON unterstützt die folgenden grundlegenden Datentypen:</p>
+        <ul>
+          <li>
+            <strong>String:</strong> Eine Zeichenkette in doppelten
+            Anführungszeichen, z.B., <code>"Max"</code>.
+          </li>
+          <li>
+            <strong>Number:</strong> Eine Ganzzahl oder Gleitkommazahl, z.B.,
+            <code>25</code> oder <code>12.5</code>.
+          </li>
+          <li>
+            <strong>Boolean:</strong> Ein Wahrheitswert, entweder
+            <code>true</code> oder <code>false</code>.
+          </li>
+          <li>
+            <strong>Null:</strong> Ein Nullwert, um anzugeben, dass der Wert
+            leer oder nicht vorhanden ist (<code>null</code>).
+          </li>
+          <li>
+            <strong>Array:</strong> Eine geordnete Liste von Werten in eckigen
+            Klammern, z.B., <code>["Deutsch", "Englisch"]</code>.
+          </li>
+          <li>
+            <strong>Objekt:</strong> Ein Satz von Schlüssel-Wert-Paaren in
+            geschweiften Klammern, z.B., <code>{"name": "Max"}</code>.
+          </li>
+        </ul>
+
+        <!-- Beispiel für JSON -->
+        <h3>Beispiel für JSON-Daten</h3>
+        <p>
+          Im folgenden Beispiel wird eine Person mit den Eigenschaften
+          <code>name</code>, <code>alter</code>, <code>sprache</code> und
+          <code>verheiratet</code> dargestellt. Dies zeigt, wie JSON verwendet
+          werden kann, um Daten in strukturierter Form zu speichern:
+        </p>
+        <pre><code>
+    {
+        "name": "Max",
+        "alter": 25,
+        "sprache": ["Deutsch", "Englisch"],
+        "verheiratet": false
+    }
+        </code></pre>
+
+        <!-- JSON Anwendungsbeispiele -->
+        <h3>Anwendungsbeispiele</h3>
+        <p>JSON wird in vielen Bereichen verwendet, darunter:</p>
+        <ul>
+          <li>
+            <strong>API-Kommunikation:</strong> APIs senden oft JSON-Daten
+            zwischen Server und Client, z.B., um Benutzerprofile oder Produkte
+            abzurufen.
+          </li>
+          <li>
+            <strong>Konfigurationsdateien:</strong> JSON wird häufig für
+            Konfigurationsdateien in Webanwendungen und Frameworks verwendet.
+          </li>
+          <li>
+            <strong>Datenbanken:</strong> Dokumentbasierte Datenbanken wie
+            MongoDB speichern Daten im JSON-ähnlichen Format BSON.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
